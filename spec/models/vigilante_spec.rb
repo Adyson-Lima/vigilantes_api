@@ -7,7 +7,7 @@ RSpec.describe Vigilante, type: :model do
   describe 'testes de preenchimento do model Vigilante' do
 
     it 'name consegue ser preenchido?' do
-      @vigilante.name = ''
+      @vigilante.name = 'dave'
       expect(@vigilante.name).to eq('dave')
     end
 

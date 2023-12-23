@@ -1,0 +1,2 @@
+class Vigilante < ApplicationRecord
+end
