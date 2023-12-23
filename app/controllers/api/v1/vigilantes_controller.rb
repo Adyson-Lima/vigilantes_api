@@ -1,6 +1,6 @@
 class Api::V1::VigilantesController < ApplicationController
 
-  before_action :set_vigilante, only: %i[show update] # show update destroy
+  before_action :set_vigilante, only: %i[show update destroy] # show update destroy
 
   def index
     @vigilantes = Vigilante.all 
@@ -26,6 +26,10 @@ class Api::V1::VigilantesController < ApplicationController
     else
       render json: @vigilante.errors, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @vigilante.destroy!
   end
 
 private
