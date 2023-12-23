@@ -11,6 +11,11 @@ RSpec.describe Vigilante, type: :model do
       expect(@vigilante.name).to eq('dave')
     end
 
+    it 'vehicle consegue ser preenchido?' do
+      @vigilante.vehicle = ''
+      expect(@vigilante.vehicle).to eq('Xanadu RV')
+    end
+
   end
 
 end
