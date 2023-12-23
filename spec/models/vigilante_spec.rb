@@ -12,7 +12,7 @@ RSpec.describe Vigilante, type: :model do
     end
 
     it 'vehicle consegue ser preenchido?' do
-      @vigilante.vehicle = ''
+      @vigilante.vehicle = 'Xanadu RV'
       expect(@vigilante.vehicle).to eq('Xanadu RV')
     end
 
