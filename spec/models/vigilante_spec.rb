@@ -18,4 +18,14 @@ RSpec.describe Vigilante, type: :model do
 
   end
 
+  describe 'testes de validacao do model Vigilante' do
+
+    it 'objeto vehicle valido com campos obrigatorios preenchidos?' do
+      @vigilante.name = ''
+      @vigilante.vehicle = ''
+      expect(@vigilante).to be_valid
+    end
+
+  end
+
 end
