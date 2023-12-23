@@ -283,7 +283,7 @@ a {
   <dl style="margin-left: 0px;">
   <dt id="example_group_1" class="passed">Testes de verificação de existencia de pastas</dt>
     <script type="text/javascript">moveProgressBar('12.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">a pasta spec/models existe?</span><span class='duration'>0.02068s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">a pasta spec/models existe?</span><span class='duration'>0.01888s</span></dd>
     <script type="text/javascript">moveProgressBar('25.0');</script>
     <dd class="example passed"><span class="passed_spec_name">a pasta spec/controllers existe?</span><span class='duration'>0.00037s</span></dd>
     <script type="text/javascript">moveProgressBar('37.5');</script>
@@ -301,40 +301,22 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_3" class="passed">testes de preenchimento do model Vigilante</dt>
     <script type="text/javascript">moveProgressBar('62.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">name consegue ser preenchido?</span><span class='duration'>0.01052s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">name consegue ser preenchido?</span><span class='duration'>0.01216s</span></dd>
     <script type="text/javascript">moveProgressBar('75.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">vehicle consegue ser preenchido?</span><span class='duration'>0.00143s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">vehicle consegue ser preenchido?</span><span class='duration'>0.00100s</span></dd>
   </dl>
 </div>
 <div id="div_group_4" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_4" class="passed">testes de validacao do model Vigilante</dt>
     <script type="text/javascript">moveProgressBar('87.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">objeto vehicle valido com campos obrigatorios preenchidos?</span><span class='duration'>0.00217s</span></dd>
-    <script type="text/javascript">makeRed('rspec-header');</script>
-    <script type="text/javascript">makeRed('div_group_4');</script>
-    <script type="text/javascript">makeRed('example_group_4');</script>
+    <dd class="example passed"><span class="passed_spec_name">objeto vehicle valido com campos obrigatorios preenchidos?</span><span class='duration'>0.00111s</span></dd>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example failed">
-      <span class="failed_spec_name">objeto vehicle invalido com campos obrigatorios não preenchidos?</span>
-      <span class="duration">0.26178s</span>
-      <div class="failure" id="failure_1">
-        <div class="message"><pre>  Failure/Error: expect(vigilante).to be_valid
-    expected #&lt;Vigilante id: nil, name: nil, vehicle: nil, created_at: nil, updated_at: nil&gt; to be valid, but got errors: Name can&#39;t be blank, Vehicle can&#39;t be blank
-  # ./spec/models/vigilante_spec.rb:31:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-        <div class="backtrace"><pre>./spec/models/vigilante_spec.rb:31:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-    <pre class="ruby"><code><span class="linenum">29</span>    it 'objeto vehicle invalido com campos obrigatorios não preenchidos?' do
-<span class="linenum">30</span>      vigilante = Vigilante.new
-<span class="offending"><span class="linenum">31</span>      expect(vigilante).to be_valid</span>
-<span class="linenum">32</span>    end
-<span class="linenum">33</span>
-<span class="linenum">34</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
-      </div>
-    </dd>
+    <dd class="example passed"><span class="passed_spec_name">objeto vehicle invalido com campos obrigatorios não preenchidos?</span><span class='duration'>0.00623s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.30892 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "8 examples, 1 failure";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.04479 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "8 examples, 0 failures";</script>
 </div>
 </div>
 </body>

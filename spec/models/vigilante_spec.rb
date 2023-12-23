@@ -28,7 +28,7 @@ RSpec.describe Vigilante, type: :model do
 
     it 'objeto vehicle invalido com campos obrigatorios não preenchidos?' do
       vigilante = Vigilante.new
-      expect(vigilante).to be_valid
+      expect(vigilante).to be_invalid
     end
 
   end
