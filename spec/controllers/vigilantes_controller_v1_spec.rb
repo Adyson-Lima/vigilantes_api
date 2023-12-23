@@ -13,7 +13,7 @@ RSpec.describe Api::V1::VigilantesController, type: :controller do
   end
 
   describe 'GET /api/v1/vigilantes/id' do
-    it 'Consegue listar um vigilante especifico e retornar tstaus 200?' do
+    it 'Consegue listar um vigilante especifico e retornar status 200?' do
       get :show, params: {id: @vigilante.id}
       expect(response.body).to include_json(name: 'J. Torque')
       expect(response).to have_http_status(200)
