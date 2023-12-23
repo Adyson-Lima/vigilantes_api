@@ -1,6 +1,6 @@
 class Api::V1::VigilantesController < ApplicationController
 
-  before_action :set_vigilante, only: %i[show] # show update destroy
+  before_action :set_vigilante, only: %i[show update] # show update destroy
 
   def index
     @vigilantes = Vigilante.all 
@@ -15,6 +15,14 @@ class Api::V1::VigilantesController < ApplicationController
     @vigilante = Vigilante.new(vigilante_params)
     if @vigilante.save 
       render json: @vigilante, status: :created, location: api_v1_vigilante_url(@vigilante)
+    else
+      render json: @vigilante.errors, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    if @vigilante.update(vigilante_params)
+      render json: @vigilante 
     else
       render json: @vigilante.errors, status: :unprocessable_entity
     end
