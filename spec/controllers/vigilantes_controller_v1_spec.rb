@@ -37,4 +37,13 @@ RSpec.describe Api::V1::VigilantesController, type: :controller do
     end
   end
 
+  describe 'DELETE /api/v1/vigilantes/id' do
+    it 'Consegue excluir um vigilante e retornar status 204?' do
+      vigilante = Vigilante.last
+      delete :destroy, params: {id: vigilante.id}
+      expect(Vigilante.all).not_to include(vigilante)
+      expect(response).to have_http_status(204)
+    end
+  end
+
 end
