@@ -28,4 +28,13 @@ RSpec.describe Api::V1::VigilantesController, type: :controller do
     end
   end
 
+  describe 'PATCH /api/v1/vigilantes/id' do
+    it 'Consegue atualizar um vigilante e retornar status 200?' do
+      vigilante = Vigilante.last
+      patch :update, params: {vigilante: {name: 'Convoy', vehicle: '72 moth truck'}, id: vigilante.id}
+      expect(response.body).to include_json(name: 'Convoy')
+      expect(response).to have_http_status(200)
+    end
+  end
+
 end
